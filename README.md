@@ -3,28 +3,27 @@ Espresso heuristic logic minimizer for Windows - University of California, Berke
 
 # This is a Windows and C++20 Compatible build of Espresso heuristic logic minimizer
 
-/* Oct Tools Distribution 3.0
- *
- * Copyright (c) 1988, 1989, Regents of the University of California.
- * All rights reserved.
- *
- * Use and copying of this software and preparation of derivative works
- * based upon this software are permitted.  However, any distribution of
- * this software or derivative works must include the above copyright
- * notice.
- *
- * This software is made available AS IS, and neither the Electronics
- * Research Laboratory or the University of California make any
- * warranty about the software, its performance or its conformity to
- * any specification.
- *
- * Suggestions, comments, or improvements are welcome and should be
- * addressed to:
- *
- *   octtools@eros.berkeley.edu
- *   ..!ucbvax!eros!octtools
- */
- 
+Oct Tools Distribution 3.0
+
+Copyright (c) 1988, 1989, Regents of the University of California.
+All rights reserved.
+
+Use and copying of this software and preparation of derivative works
+based upon this software are permitted.  However, any distribution of
+this software or derivative works must include the above copyright
+notice.
+
+This software is made available AS IS, and neither the Electronics
+Research Laboratory or the University of California make any
+warranty about the software, its performance or its conformity to
+any specification.
+
+Suggestions, comments, or improvements are welcome and should be
+addressed to:
+
+octtools@eros.berkeley.edu
+
+# Description
 Espresso is a two level logic minimizer developed in University of California, Berkeley. You are allowed to use this tool for the project.
 
 Please download one of the executables below according to your system.
