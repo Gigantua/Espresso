@@ -1,5 +1,5 @@
 # Espresso
-Espresso heuristic logic minimizer for Windows - University of California, Berkeley
+Espresso heuristic logic minimizer made C++20 Windows 10 compatible - University of California, Berkeley
 
 # This is a Windows and C++20 Compatible build of Espresso heuristic logic minimizer
 
