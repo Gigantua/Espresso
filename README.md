@@ -9,6 +9,7 @@ Please download one of the executables below according to your system.
 
 Here is a sample input file. If this file is run w/o removing the comments they will end up in the output, otherwise it will work as shown below.
 
+```
 .i 4        # .i specifies the number of inputs
 .o 3       # .o specifies the number of outputs
 .ilb Q1 Q0 D N      # This line specifies the names of the inputs in order
@@ -27,15 +28,17 @@ Here is a sample input file. If this file is run w/o removing the comments they 
 1110 001
 1111 ---
 .e       # Signifies the end of the file.
+```
 
-In the output set the -'s represent don't cares. You only need to specify those input combinations which produce a one in one of the outputs. Lines which are skipped are assumed to be zeroes on the outputs.
+In the output set the `-`'s represent don't cares. You only need to specify those input combinations which produce a one in one of the outputs. Lines which are skipped are assumed to be zeroes on the outputs.
 
 When running espresso a basic command line is:
 
-espresso -o outputfilter inputfile
+`espresso -o outputfilter inputfile`
 
 For example to produce a relatively human readable output here is a good output filter for the input file given earlier:
 
+```
 espressotest/> espresso -o eqntott temp.in
 
 T1 = (!Q1&D) | (!Q1&Q0&N);
@@ -43,11 +46,13 @@ T1 = (!Q1&D) | (!Q1&Q0&N);
 T0 = (Q1&!Q0&D) | (!Q0&N) | (!Q1&Q0&N);
 
 OPEN = (Q1&Q0);
+```
 
 The minimized equation for each output is given.
 
 Running espresso w/o any output filter produces a more machine readable format: [This is probably the output you'll want to pipe into your perl scripts to generate verilog.]
 
+```
 espressotest/> espresso temp.in
 .i 4
 .o 3
@@ -60,9 +65,10 @@ espressotest/> espresso temp.in
 -0-1 010
 01-1 110
 .e
+```
 
-The first four lines are the same as the input file. The fifth line specifies how many product terms were created following the header. Left set of numbers on each of the subsequent lines specifies the inputs for a given product term. Each digit represents one of the inputs in the order specified on the ".ilb" line. "0"'s represent inverted inputs and "1"'s represent non-inverted inputs, "-" represent inputs which are not used in a given product term. I.e., in the first line "0-1-" represents (!Q1&D).
+The first four lines are the same as the input file. The fifth line specifies how many product terms were created following the header. Left set of numbers on each of the subsequent lines specifies the inputs for a given product term. Each digit represents one of the inputs in the order specified on the `.ilb` line. `0`'s represent inverted inputs and `1`'s represent non-inverted inputs, `-` represent inputs which are not used in a given product term. I.e., in the first line `0-1-` represents `(!Q1&D)`.
 
-The second half of the first line represents which outputs have that product term in their sum term. IE the "100" means that only T1 will use the product term defined in the last paragraph. Looking down each column of the second half shows which product terms are summed to produce the output for that line so in this example T1 uses only the 1st and last product terms in its sum.
+The second half of the first line represents which outputs have that product term in their sum term. IE the `100` means that only `T1` will use the product term defined in the last paragraph. Looking down each column of the second half shows which product terms are summed to produce the output for that line so in this example `T1` uses only the 1st and last product terms in its sum.
 
 For further information about Espresso, please refer to https://ptolemy.berkeley.edu/projects/embedded/pubs/downloads/espresso/index.htm 
