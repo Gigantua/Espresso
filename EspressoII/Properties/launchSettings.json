@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Selftest": {
+      "commandName": "Project",
+      "commandLineArgs": "-"
+    },
+    "pla": {
+      "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\..\\tests\\tlex\\cordic.pla"
+    }
+  }
+}

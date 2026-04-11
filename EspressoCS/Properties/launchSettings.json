@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Selftest": {
+      "commandName": "Project",
+      "commandLineArgs": "-selftest ..\\..\\..\\..\\tests"
+    },
+    "pla": {
+      "commandName": "Project"
+    }
+  }
+}
