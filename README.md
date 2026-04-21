@@ -1,9 +1,7 @@
 # Espresso
 
-![Espresso](image.jpg)
-
 Modern C# rewrites of the Berkeley **Espresso-II** two-level logic minimizer,
-alongside the original C reference build kept for cross-validation.
+alongside the original C reference buildable in a perfect Visual Studio Solution for easy development. 
 
 Espresso minimizes Boolean / multi-valued logic functions expressed as PLA
 (Programmable Logic Array) files — the canonical tool for two-level synthesis
@@ -20,10 +18,12 @@ in digital design.
 | `EspressoII.Tests/` | MSTest project. Runs every PLA in `tests/` through both the C and C# minimizers in parallel and reports per-file cube counts and timings. |
 | `tests/` | PLA regression corpus (`examples/`, `pla/`, `table_ex/`, `tlex/`, plus `hard_examples/`). |
 
-Line counts are over tracked source files only, excluding `bin/`, `obj/`, and
-`x64/`. So `EspressoII` reaches parity-or-better cube counts against Berkeley's
+
+![Espresso](image.jpg)
+
+ `EspressoII` reaches parity-or-better cube counts against Berkeley's
 ~14 kLoC C implementation in roughly **1/3.7 the source size** — and ~1/3.7
-the size of the mechanical `EspressoCS` port it was distilled from.
+the size of the mechanical `EspressoCS` port it was distilled from, with on average far better performance.
 
 ## Quality vs. the original Espresso
 
